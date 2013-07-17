@@ -17,7 +17,7 @@ class SecondViewController extends WPDKViewController {
    */
   public function __construct()
   {
-    parent::__construct( 'second-view-controller', 'Title of Second view cntroller' );
+    parent::__construct( 'second-view-controller', 'Title of Second view controller' );
 
     $this->view = new CustomView();
   }

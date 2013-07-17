@@ -5,21 +5,16 @@
  * ## Overview
  * This sample shows how works the view controller
  *
- *     <div class="wrap" id="first-view-controller-view-root">
- *       <button class="wpdk-fullscreen"></button>
- *
- *       <!-- Custom Content -->
- *       <h3>I'm a TAG h3</h3>
- *       <p>And I'm a paragraph</p>
- *
- *       <!-- Header -->
- *       <div class="clearfix wpdk-header-view" id="first-view-controller-header-view">
- *         <div class="wpdk-vc-header-icon" id="first-view-controller-header-view"></div>
- *         <h2>Title of First view cntroller</h2>
+ *     <div class="wpdk-view wrap clearfix" id="first-view-controller-view-root" data-type="wpdk-view">
+ *       <h3>Draw Before</h3>
+ *       <div class="wpdk-view clearfix wpdk-header-view clearfix" id="first-view-controller-header-view" data-type="wpdk-view">
+ *         <div class="wpdk-vc-header-icon" id="first-view-controller-header-view" data-type="wpdk-header-view"></div>
+ *         <h2><button class="wpdk-fullscreen"></button>Title of First view controller    </h2>
  *         <div class="wpdk-vc-header-after-title"></div>
+ *         <h3>Draw Head</h3>
  *       </div>
- *
  *     </div>
+ *
  *
  * @class           FirstViewController
  * @author          =undo= <info@wpxtre.me>
@@ -39,7 +34,7 @@ class FirstViewController extends WPDKViewController {
    */
   public function __construct()
   {
-    parent::__construct( 'first-view-controller', 'Title of First view cntroller' );
+    parent::__construct( 'first-view-controller', 'Title of First view controller' );
 
     $this->view->content     = $this->draw_before();
     $this->viewHead->content = $this->draw_head();
